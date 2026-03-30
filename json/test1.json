@@ -1,0 +1,206 @@
+{
+  "metadata": {
+    "node_count": 5,
+    "connection_count": 5,
+    "created_at": "2026-03-24T23:40:13.528838"
+  },
+  "nodes": [
+    {
+      "id": "node_1",
+      "name": "5G WiFi路由器 Test",
+      "type": "wireless_communication",
+      "position": {
+        "x": 100.0,
+        "y": 100.0
+      },
+      "size": {
+        "width": 120.0,
+        "height": 60.0
+      },
+      "properties": {},
+      "appearance": {
+        "fill_color": "#60b8ff",
+        "border_color": "#1973bb",
+        "text_color": "#ffffff"
+      }
+    },
+    {
+      "id": "node_2",
+      "name": "Debug BOX",
+      "type": "debug_tool",
+      "position": {
+        "x": 300.0,
+        "y": 100.0
+      },
+      "size": {
+        "width": 120.0,
+        "height": 60.0
+      },
+      "properties": {},
+      "appearance": {
+        "fill_color": "#63e368",
+        "border_color": "#3a873e",
+        "text_color": "#ffffff"
+      }
+    },
+    {
+      "id": "node_3",
+      "name": "车辆控制器",
+      "type": "controller",
+      "position": {
+        "x": 500.0,
+        "y": 100.0
+      },
+      "size": {
+        "width": 120.0,
+        "height": 60.0
+      },
+      "properties": {},
+      "appearance": {
+        "fill_color": "#ffb74c",
+        "border_color": "#c47500",
+        "text_color": "#ffffff"
+      }
+    },
+    {
+      "id": "node_4",
+      "name": "车辆天线",
+      "type": "antenna",
+      "position": {
+        "x": 700.0,
+        "y": 100.0
+      },
+      "size": {
+        "width": 120.0,
+        "height": 60.0
+      },
+      "properties": {},
+      "appearance": {
+        "fill_color": "#9d6f5e",
+        "border_color": "#5d4137",
+        "text_color": "#ffffff"
+      }
+    },
+    {
+      "id": "node_5",
+      "name": "T1 Ethernet转换器",
+      "type": "converter",
+      "position": {
+        "x": 300.0,
+        "y": 300.0
+      },
+      "size": {
+        "width": 120.0,
+        "height": 60.0
+      },
+      "properties": {},
+      "appearance": {
+        "fill_color": "#cb33e5",
+        "border_color": "#781e87",
+        "text_color": "#ffffff"
+      }
+    }
+  ],
+  "connections": [
+    {
+      "id": "conn_1",
+      "from": "node_1",
+      "to": "node_2",
+      "type": "ethernet_cable",
+      "label": "网络接入",
+      "properties": {},
+      "appearance": {
+        "line_color": "#2196f3",
+        "line_width": 2,
+        "line_style": 1,
+        "has_arrow": true
+      },
+      "metadata": {
+        "type_name": "网线连接",
+        "description": "以太网电缆连接，用于数据传输"
+      }
+    },
+    {
+      "id": "conn_2",
+      "from": "node_2",
+      "to": "node_3",
+      "type": "ethernet_cable",
+      "label": "数据传输",
+      "properties": {},
+      "appearance": {
+        "line_color": "#2196f3",
+        "line_width": 2,
+        "line_style": 1,
+        "has_arrow": true
+      },
+      "metadata": {
+        "type_name": "网线连接",
+        "description": "以太网电缆连接，用于数据传输"
+      }
+    },
+    {
+      "id": "conn_3",
+      "from": "node_3",
+      "to": "node_4",
+      "type": "can_bus",
+      "label": "控制信号",
+      "properties": {},
+      "appearance": {
+        "line_color": "#9c27b0",
+        "line_width": 2,
+        "line_style": 1,
+        "has_arrow": false
+      },
+      "metadata": {
+        "type_name": "CAN总线",
+        "description": "控制器局域网连接，用于车辆控制信号"
+      }
+    },
+    {
+      "id": "conn_4",
+      "from": "node_2",
+      "to": "node_5",
+      "type": "ethernet_cable",
+      "label": "冗余路径",
+      "properties": {},
+      "appearance": {
+        "line_color": "#2196f3",
+        "line_width": 2,
+        "line_style": 1,
+        "has_arrow": true
+      },
+      "metadata": {
+        "type_name": "网线连接",
+        "description": "以太网电缆连接，用于数据传输"
+      }
+    },
+    {
+      "id": "conn_5",
+      "from": "node_5",
+      "to": "node_4",
+      "type": "can_bus",
+      "label": "备用连接",
+      "properties": {},
+      "appearance": {
+        "line_color": "#9c27b0",
+        "line_width": 2,
+        "line_style": 1,
+        "has_arrow": false
+      },
+      "metadata": {
+        "type_name": "CAN总线",
+        "description": "控制器局域网连接，用于车辆控制信号"
+      }
+    }
+  ],
+  "scene_settings": {
+    "grid_enabled": true,
+    "grid_size": 20,
+    "background_color": "#f5f5f5"
+  },
+  "export_metadata": {
+    "exported_at": "2026-03-24T23:40:13.528855",
+    "application": "DiagnosticAssistant Graphics Demo",
+    "version": "1.0"
+  }
+}
